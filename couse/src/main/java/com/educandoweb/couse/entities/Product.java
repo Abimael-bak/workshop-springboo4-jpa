@@ -107,7 +107,7 @@ public class Product implements Serializable{
 		for(OrderItem x: items) {
 			set.add(x.getOrder());
 		}
-		return set;
+		return set;     
 	}
 
 	@Override

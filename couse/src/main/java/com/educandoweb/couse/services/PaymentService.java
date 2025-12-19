@@ -7,23 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.educandoweb.couse.entities.Payment;
-import com.educandoweb.couse.entities.Product;
 import com.educandoweb.couse.repositories.PaymentRepository;
-import com.educandoweb.couse.repositories.ProductRepository;
 
 @Service
-public class ProductService {
+public class PaymentService {
 
-	@Autowired
-	private ProductRepository repository;
 	
-	public List<Product> findAll(){
+	@Autowired
+	private PaymentRepository repository;
+	
+	public List<Payment> findAll(){
 		return repository.findAll();
 	}
 	
-	public Product findById(Long id) {
+	public Payment findById(Long id) {
 		
-		Optional<Product> obj = repository.findById(id);
+		Optional<Payment> obj = repository.findById(id);
 		return obj.get();
 	}
 }
+
